@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>세르힐 타임럭스 크림 – Cellheal 공식몰</title>
+  <meta name="description" content="피부 진정과 탄력 강화를 위한 프리미엄 크림, 세르힐 타임럭스 크림을 Cellheal 공식 스토어에서 만나보세요." />
+  <meta name="keywords" content="세르힐, Cellheal, 타임럭스 크림, 진정크림, 피부과학 화장품, 민감성 피부, 고기능성 스킨케어" />
+  <link rel="canonical" href="https://celheal.shop/product.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Cellheal" />
+  <meta property="og:url" content="https://celheal.shop/product.html" />
+  <meta property="og:title" content="세르힐 타임럭스 크림 – 피부 진정 & 재생 크림" />
+  <meta property="og:description" content="피부 본연의 힘을 되찾는 고기능 크림, 세르힐 타임럭스 크림" />
+  <meta property="og:image" content="https://celheal.shop/images/cellheal_time_lux_cream_1.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="세르힐 타임럭스 크림 – 피부 진정 & 재생 크림" />
+  <meta name="twitter:description" content="피부 본연의 힘을 되찾는 고기능 크림, 세르힐 타임럭스 크림" />
+  <meta name="twitter:image" content="https://celheal.shop/images/cellheal_time_lux_cream_1.jpg" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/style-product.css" />
+</head>
+
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">CELLHEAL</a>
+        <ul class="nav-menu">
+          <li><a href="/">홈</a></li>
+          <li><a href="about.html">브랜드 소개</a></li>
+          <li><a href="#qa">Q&A</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="product-detail">
+      <section class="hero-detail coupang-style">
+        <div class="product-images swiper product-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="images/cellheal_time_lux_cream_1.jpg"
+                alt="제품 이미지 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/cellheal_time_lux_cream_2.jpg"
+                alt="제품 이미지 2"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="product-info">
+          <h1>세르힐 타임럭스 크림</h1>
+
+          <div class="price">
+            <span class="discount">22% ↓</span>
+            <span class="final-price">34,900원</span>
+            <span class="original-price">45,000원</span>
+          </div>
+
+          <div class="action-buttons">
+            <a
+              href="https://smartstore.naver.com/skinskill/products/12058837587?nl-query=%EC%84%B8%EB%A5%B4%ED%9E%90&nl-ts-pid=jbB%2BZdqosK8ssDVLOdlssssst6w-061899"
+              class="btn-buy"
+              target="_blank"
+              >구매하러 가기</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="product-detail-info">
+        <div class="detail-wrapper">
+          <h2 class="section-title">상세 설명</h2>
+        </div>
+        <!-- 수정된 경로 -->
+        <img
+          src="images/product_cell_heal_info_1.webp"
+          alt="제품 상세 설명 이미지"
+          class="detail-image"
+        />
+        <video
+          class="product-video"
+          src="videos/cell_heal_video.mp4"
+          muted
+          playsinline
+          preload="auto"
+          loop
+        ></video>
+        <img
+          src="images/product_cell_heal_info_2.webp"
+          alt="제품 상세 설명 이미지"
+          class="detail-image"
+        />
+      </section>
+    </main>
+    <!-- 고정 구매 버튼 -->
+    <div id="floating-buy" class="floating-buy hidden">
+      <a
+        href="https://smartstore.naver.com/skinskill/products/12058837587"
+        target="_blank"
+        >구매하러 가기</a
+      >
+    </div>
+
+    <!-- Top 버튼 -->
+    <button id="scroll-top-btn" class="scroll-top-btn hidden">TOP</button>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">기업 소개</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">문의하기</a>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+      <p>&copy; 2025 Cellheal. All rights reserved.</p>
+    </footer>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".product-swiper", {
+      loop: true,
+      centeredSlides: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      new Swiper(".product-swiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      // 비디오 자동 재생 로직
+      const video = document.querySelector(".product-video");
+      if (video) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) video.play();
+            else video.pause();
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(video);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.querySelector(".product-video");
+
+      if (!video) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause(); // 선택: 필요 없다면 제거 가능
+          }
+        },
+        {
+          threshold: 0.5, // 화면의 50% 이상 들어왔을 때 재생
+        }
+      );
+
+      observer.observe(video);
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const floatingBuy = document.getElementById("floating-buy");
+    const buyButton = document.querySelector(".btn-buy");
+    const scrollTopBtn = document.getElementById("scroll-top-btn");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          floatingBuy.classList.add("hidden");
+        } else {
+          floatingBuy.classList.remove("hidden");
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (buyButton) {
+      observer.observe(buyButton);
+    }
+
+    // Top 버튼 표시 조건
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.remove("hidden");
+      } else {
+        scrollTopBtn.classList.add("hidden");
+      }
+    });
+
+    // Top 버튼 클릭 시 상단 이동
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+</script>
+
+</html>

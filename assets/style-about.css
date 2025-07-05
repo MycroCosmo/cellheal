@@ -1,0 +1,640 @@
+@import url('https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css');
+
+
+/* Pretendard Regular (400) 예시 */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/static/alternative/Pretendard-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold (600) 예시 */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/static/alternative/Pretendard-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../public/static/Pretendard-Black.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variable font 적용 시(선택사항) */
+@font-face {
+  font-family: 'PretendardVariable';
+  src: url('/static/variable/PretendardVariable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --primary: #8A5F73;
+  --secondary: #F4E1E6;
+  --txt: #333;
+  --bg: #fff;
+  --outline: #8A5F73;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Pretendard', sans-serif; color:var(--txt); background:var(--bg); line-height:1.6; }
+
+a { text-decoration:none; }
+/* 네비게이션 바 */
+.navbar {
+  background-color: #fff;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ccc;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}
+.hero-banner {
+  background: url('/images/hero-bg.webp') no-repeat center center / cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+    background-image: url('/images/image2.avif'); /* 또는 './images/image1.png' */
+  background-size: cover;        /* 이미지가 영역을 꽉 채우도록 */
+  background-position: center;   /* 중앙 정렬 */
+  background-repeat: no-repeat;  /* 반복 방지 */
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 32px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+}
+
+.hero {
+  text-align:center; padding:80px 20px;
+  background: var(--secondary);
+}
+.logo { width:100px; margin-bottom:16px; }
+.hero h1 { font-size:2.5rem; margin-bottom:8px; }
+.hero p { font-size:1.1rem; margin-bottom:20px; color:#555; }
+.btn {
+  display:inline-block; padding:12px 28px; font-size:1rem; font-weight:600;
+  border-radius:4px; transition: background .3s, color .3s;
+}
+.btn-primary {
+  background:var(--primary); color:#fff; border: none;
+}
+.btn-primary:hover { background:#703f56; }
+
+.btn-outline {
+  border:2px solid var(--outline); color:var(--outline);
+}
+.btn-outline:hover {
+  background:var(--outline); color:#fff;
+}
+
+.products {
+  padding:60px 20px;
+  text-align:center;
+}
+.products h2 { font-size:2rem; margin-bottom:24px; }
+
+.grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:24px; max-width:1200px; margin:0 auto;
+}
+.card {
+  background:#fff; border:1px solid #eee;
+  border-radius:8px; overflow:hidden;
+  display:flex; flex-direction:column;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+  transition: none;
+}
+.card:hover {
+  transform:none;
+  box-shadow: none;
+}
+.card img { width:100%; height:auto; }
+.card h3 { font-size:1.3rem; margin:16px; color:var(--primary); }
+.card p { flex-grow:1; margin:0 16px 16px; color:#555; }
+.card .btn { margin:0 16px 16px; text-align:center; }
+
+.about {
+  padding:60px 20px; background:#fafafa; text-align:center;
+}
+.about h2 { font-size:2rem; margin-bottom:16px; }
+.about p { max-width:800px; margin:0 auto; color:#555; }
+
+footer {
+  background:#222; color:#aaa; padding:20px;
+  text-align:center; font-size:.9rem;
+}
+.footer-nav, .footer-social {
+  margin-bottom:12px;
+}
+.footer-nav a, .footer-social a {
+  color:#aaa; margin:0 8px; font-size:0.9rem;
+}
+.footer-social a:hover,
+.footer-nav a:hover { color:#fff; }
+
+.product-detail-info {
+  margin: 40px 20px;
+  /* text-align: center; ← 없어도 됨 */
+}
+
+.detail-image {
+  display: block;
+  margin: 0 auto;           /* ✅ 수평 중앙 정렬 */
+  max-width: 800px;
+  width: 100%;              /* 또는 width: auto; */
+  height: auto;
+}
+
+.products {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #111;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 16px;
+  color: #222;
+}
+
+.product-card p {
+  margin: 0 16px 16px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.product-card .btn-secondary {
+  display: inline-block;
+  margin: 0 16px 16px;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: 1px solid #333;
+  color: #333;
+  text-align: center;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.product-card .btn-secondary:hover {
+  background-color: #333;
+  color: #fff;
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 300px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 16px;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin: 0 16px 16px;
+}
+
+.product-card .btn-secondary {
+  display: inline-block;
+  margin: 0 16px 16px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  background: white;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.product-card .btn-secondary:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* 👇 Hover 효과 강제 제거 */
+.product-card {
+  transition: none !important;
+}
+
+.product-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+  .swiper-pagination-bullet {
+    background-color: #000 !important;
+    opacity: 0.3;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    opacity: 1;
+  }
+  .benefits{
+    text-align: left;
+  }
+  /* ==== Hero Section (기업 슬로건 영역) ==== */
+.hero-about {
+  position: relative;
+  background-image: url('/images/about-hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 140px 20px;
+  text-align: center;
+}
+
+.hero-about::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-about .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-about h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-about p {
+  font-size: 1.3rem;
+  color: #ddd;
+}
+
+/* ==== Company Philosophy Section ==== */
+.philosophy {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.philosophy h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+.philosophy-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-item {
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.philosophy-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.philosophy-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ==== History or Milestone Section ==== */
+.timeline {
+  background: var(--secondary);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.timeline ul {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.timeline li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .hero-about h1 {
+    font-size: 2rem;
+  }
+  .philosophy-items {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.about-image {
+  display: block;
+  max-width: 800px;      /* PC 기준 최대 너비 제한 */
+  width: 100%;           /* 반응형 */
+  height: auto;          /* 종횡비 유지 */
+  margin: 32px auto;     /* 상하 여백 + 수평 가운데 정렬 */
+  border-radius: 8px;    /* 부드러운 모서리 */
+  object-fit: cover;     /* 이미지가 영역을 꽉 채우도록 */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);  /* 약간의 입체감 */
+}
+/* Hero Section */
+.about-hero {
+  position: relative;
+  background: url('/images/about-hero.jpg') no-repeat center center / cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.about-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Content Block */
+.about-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+.about-block-img {
+  flex: 1 1 50%;
+  max-width: 600px;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.about-block-text {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+.about-block-text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.about-block-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .about-block {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  .about-block.reverse {
+    flex-direction: column;
+  }
+  .about-block-img,
+  .about-block-text {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+footer {
+  background: #222;
+  color: #aaa;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-links a,
+.social a {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0 8px;
+}
+
+.footer-links a:hover,
+.social a:hover {
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .brand-message {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 16px;
+    word-break: keep-all;
+  }
+}
